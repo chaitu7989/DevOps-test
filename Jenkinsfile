@@ -6,7 +6,7 @@ pipeline {
                     sh 'mvn clean package'
                 }
             }
-         stage('build and analyze') {
+         stage('sonar verifiction') {
             steps {
                     sh 'mvn clean verify sonar:sonar \
                        -Dsonar.projectKey=test \
